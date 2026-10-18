@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from "vue";
 import { useRouter } from "vue-router";
+import FeatureScroll from "./FeatureScroll.vue";
 
 const router = useRouter();
 
@@ -153,32 +154,8 @@ function handleSignup() {
         </div>
       </section>
 
-      <!-- Feature Cards Grid (3 Columns) -->
-      <section class="feature-grid content-wrap">
-        <div v-for="feature in features" :key="feature.title" class="feature-card">
-          <div class="feature-icon-box" :style="{ backgroundColor: feature.badgeBg, color: feature.badgeColor }">
-            <!-- Clock Icon -->
-            <svg v-if="feature.iconType === 'clock'" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"/>
-              <polyline points="12 6 12 12 16 14"/>
-            </svg>
-            <!-- Headphones Icon -->
-            <svg v-else-if="feature.iconType === 'headphones'" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 18v-6a9 9 0 0 1 18 0v6"/>
-              <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/>
-            </svg>
-            <!-- Donut/Progress Icon -->
-            <svg v-else viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21.21 15.89A10 10 0 1 1 8 2.83"/>
-              <path d="M22 12A10 10 0 0 0 12 2v10z"/>
-            </svg>
-          </div>
-          <div class="feature-text">
-            <h3 class="feature-title">{{ feature.title }}</h3>
-            <p class="feature-description">{{ feature.description }}</p>
-          </div>
-        </div>
-      </section>
+      <!-- Feature Scroll Showcase -->
+      <FeatureScroll />
 
       <!-- Split Section 1: Heatmap + Text -->
       <section class="split-section content-wrap">
@@ -437,7 +414,7 @@ function handleSignup() {
   display: flex;
   flex-direction: column;
   position: relative;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 /* Expanded container width to stretch horizontally across wide screens */
