@@ -368,8 +368,9 @@ const activeListTaskCount = (listId) =>
   tasks.value.filter((task) => taskBelongsToList(task, listId)).length;
 const getTaskListColor = (listId) =>
   taskLists.value.find((list) => list.id === listId)?.color || "#14b8a6";
-const getTaskListForeground = (listId) => {
-  const color = getTaskListColor(listId);
+// Shared by the list tabs and the "Create a task list" preview chip so a list
+// colour never carries text that is unreadable on it.
+const taskListForegroundForColor = (color) => {
   const channels = /^#[\da-f]{6}$/i.test(color)
     ? color.slice(1).match(/.{2}/g).map((channel) => parseInt(channel, 16))
     : [20, 184, 166];
@@ -384,6 +385,7 @@ const getTaskListForeground = (listId) => {
 
   return luminance > 0.179 ? "#111827" : "#ffffff";
 };
+const getTaskListForeground = (listId) => taskListForegroundForColor(getTaskListColor(listId));
 
 const saveTaskLists = () => {
   localStorage.setItem(taskListStorageKey, JSON.stringify({
@@ -5734,7 +5736,10 @@ onUnmounted(() => {
       >
         <div
           class="modal-box focus-dialog focus-dialog--list"
-          :style="{ '--task-list-color': newTaskListColor }"
+          :style="{
+            '--task-list-color': newTaskListColor,
+            '--task-list-foreground': taskListForegroundForColor(newTaskListColor),
+          }"
           role="dialog"
           aria-modal="true"
           aria-labelledby="task-list-modal-title"
@@ -8507,7 +8512,7 @@ onUnmounted(() => {
   max-width: 100%;
   padding: 6px 10px;
   border-radius: 9px;
-  color: #ffffff;
+  color: var(--task-list-foreground, #ffffff);
   font-size: 11.5px;
   font-weight: 600;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.16);

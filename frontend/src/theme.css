@@ -502,6 +502,30 @@ html[data-theme="light"] .dashboard-layout .focus-dialog .task-list-icon-option 
   color: #64748b;
 }
 
+/* The task/list dialogs keep their dark-theme accent colours on labels and
+   section headings, which is below a readable contrast on the light surface. */
+html[data-theme="light"] .dashboard-layout .focus-dialog .form-section-title {
+  color: #0f766e;
+}
+
+html[data-theme="light"] .dashboard-layout .focus-dialog--list .form-section-title {
+  color: color-mix(in srgb, var(--task-list-color, #14b8a6) 62%, #0f172a);
+}
+
+html[data-theme="light"] .dashboard-layout .focus-dialog .modal-group label {
+  color: #475569;
+}
+
+html[data-theme="light"] .dashboard-layout .focus-dialog .recurrence-weekdays button:not(.selected) {
+  border-color: #cbd5e1;
+  background: #ffffff;
+  color: #475569;
+}
+
+html[data-theme="light"] .dashboard-layout .focus-dialog .task-form-error {
+  color: #b91c1c;
+}
+
 html[data-theme="light"] .dashboard-layout .task-row:not(.task-focused) {
   border-color: color-mix(in srgb, var(--task-list-color) 28%, #d6e0eb);
   background-color: transparent;
