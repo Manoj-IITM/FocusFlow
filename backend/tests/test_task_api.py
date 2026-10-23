@@ -248,19 +248,25 @@ class TaskApiTests(unittest.TestCase):
         self.assertEqual(analytics["days"][0]["scheduled_occurrences"], 1)
 
     def test_overdue_and_reschedule_use_due_date(self):
-        task = self._create_task(scheduled_date="2026-10-19", due_date="2026-10-20")
+        # Relative dates: "overdue" is judged against the current day, so fixed
+        # calendar dates would make this test expire.
+        today = datetime.now().date()
+        past_schedule = (today - timedelta(days=3)).isoformat()
+        past_due = (today - timedelta(days=2)).isoformat()
+        upcoming = (today + timedelta(days=1)).isoformat()
+        task = self._create_task(scheduled_date=past_schedule, due_date=past_due)
         overdue = self.client.get(
             "/api/tasks?view=overdue", headers=self.headers
         ).get_json()
         self.assertIn(task["id"], [item["id"] for item in overdue])
         response = self.client.post(
             f"/api/tasks/{task['id']}/reschedule",
-            json={"scheduled_date": "2026-10-22", "due_date": "2026-10-22"},
+            json={"scheduled_date": upcoming, "due_date": upcoming},
             headers=self.headers,
         )
         self.assertEqual(response.status_code, 200, response.get_json())
-        self.assertEqual(response.get_json()["scheduled_date"], "2026-10-22")
-        self.assertEqual(response.get_json()["due_date"], "2026-10-22")
+        self.assertEqual(response.get_json()["scheduled_date"], upcoming)
+        self.assertEqual(response.get_json()["due_date"], upcoming)
         overdue = self.client.get(
             "/api/tasks?view=overdue", headers=self.headers
         ).get_json()
