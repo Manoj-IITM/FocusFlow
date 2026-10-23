@@ -1,12 +1,17 @@
 <script setup>
-import { ref, onMounted } from "vue";
-import axios from "axios";
-
-
+import ThemeSwitcher from "./components/ThemeSwitcher.vue";
 </script>
 
 <template>
-  <router-view />
+  <div class="app-shell">
+    <router-view v-slot="{ Component, route }">
+      <KeepAlive>
+        <component :is="Component" v-if="route.name === 'dashboard'" />
+      </KeepAlive>
+      <component :is="Component" v-if="route.name !== 'dashboard'" />
+      <ThemeSwitcher v-if="route.name !== 'dashboard'" />
+    </router-view>
+  </div>
 </template>
 
 <style>

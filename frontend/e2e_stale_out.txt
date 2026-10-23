@@ -1,0 +1,35 @@
+{
+  "step1_login_token": "obtained",
+  "step2_revoke_status": 200,
+  "step3_landing": {
+    "url": "http://localhost:5173/",
+    "buttons": [
+      "Open workspace"
+    ],
+    "signupVisible": false
+  },
+  "step4_clickLogin": {
+    "clicked": true,
+    "url": "http://localhost:5173/dashboard",
+    "formVisible": false,
+    "errorText": null
+  },
+  "step5_directSignup": {
+    "url": "http://localhost:5173/dashboard",
+    "formVisible": false,
+    "heading": null
+  },
+  "step6_apiCalls": [
+    "200 /api/auth/login",
+    "200 /api/stats",
+    "200 /api/tasks?date=2026-10-22&view=day",
+    "401 /api/stats",
+    "401 /api/tasks?date=2026-10-22&view=day",
+    "401 /api/tasks?date=2026-10-22&view=day",
+    "401 /api/stats"
+  ],
+  "step7_sessionStillStored": {
+    "token": "bGqrBlL1TU9v_P4RF9OA4Cj48kDkB4Y50qNh_cQ_AoI",
+    "user": "{\"access_token\":\"bGqrBlL1TU9v_P4RF9OA4Cj48kDkB4Y50qNh_cQ_AoI\",\"email\":\"alex@focusflow.app\",\"id\":1,\"username\":\"Alex\"}"
+  }
+}

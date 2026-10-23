@@ -1,0 +1,9 @@
+# Editor / agent tooling directories
+.kilo/
+
+# Python
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
