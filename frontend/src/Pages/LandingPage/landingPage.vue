@@ -2,8 +2,10 @@
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 import FeatureScroll from "./FeatureScroll.vue";
+import { isAuthenticated } from "../../session.js";
 
 const router = useRouter();
+const hasSavedSession = ref(isAuthenticated());
 
 // Ambient Sound Interactive State
 const isAmbientOn = ref(true);
@@ -85,11 +87,11 @@ const heatmapMatrix = ref([
 
 // Handlers
 function handleLogin() {
-  router.push("/login");
+  router.push(hasSavedSession.value ? "/dashboard" : "/login");
 }
 
 function handleSignup() {
-  router.push("/signup");
+  router.push(hasSavedSession.value ? "/dashboard" : "/signup");
 }
 </script>
 
@@ -107,8 +109,10 @@ function handleSignup() {
           <span class="brand-name">FocusFlow</span>
         </div>
         <div class="navbar-actions">
-          <button class="btn btn-ghost" @click="handleLogin">Log in</button>
-          <button class="btn btn-primary" @click="handleSignup">Sign up</button>
+          <button class="btn btn-ghost" @click="handleLogin">
+            {{ hasSavedSession ? "Open workspace" : "Log in" }}
+          </button>
+          <button v-if="!hasSavedSession" class="btn btn-primary" @click="handleSignup">Sign up</button>
         </div>
       </div>
     </header>
@@ -138,7 +142,7 @@ function handleSignup() {
 
         <div class="hero-actions">
           <button class="btn btn-primary btn-lg" @click="handleSignup">
-            Get started free
+            {{ hasSavedSession ? "Open workspace" : "Get started free" }}
             <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M5 12h14M12 5l7 7-7 7"/>
             </svg>
@@ -235,7 +239,7 @@ function handleSignup() {
             <div class="streak-ring-col">
               <div class="streak-ring-div">
                 <div class="streak-ring-inner">
-                  <span class="ring-flame">🔥</span>
+                  <span class="ring-flame">ðŸ”¥</span>
                   <span class="ring-number">12</span>
                   <span class="ring-label">days</span>
                 </div>
@@ -392,7 +396,7 @@ function handleSignup() {
     <!-- Footer -->
     <footer class="footer">
       <div class="content-wrap footer-inner">
-        <span class="copyright">© 2025 FocusFlow. All rights reserved.</span>
+        <span class="copyright">Â© 2025 FocusFlow. All rights reserved.</span>
         <nav class="footer-nav">
           <a href="#" class="footer-link">Privacy</a>
           <a href="#" class="footer-link">Terms</a>
@@ -1487,4 +1491,3 @@ function handleSignup() {
   }
 }
 </style>
-tyle>

@@ -1,0 +1,66 @@
+{
+  "offline-demo-session-left-over": {
+    "landing": {
+      "url": "http://localhost:5173/",
+      "buttons": [
+        {
+          "text": "Open workspace",
+          "visible": true
+        }
+      ],
+      "signupButtonPresent": false
+    },
+    "afterLoginClick": {
+      "clicked": true,
+      "url": "http://localhost:5173/dashboard"
+    },
+    "directLogin": {
+      "url": "http://localhost:5173/dashboard",
+      "heading": null
+    }
+  },
+  "stale-token-session-left-over": {
+    "landing": {
+      "url": "http://localhost:5173/",
+      "buttons": [
+        {
+          "text": "Open workspace",
+          "visible": true
+        }
+      ],
+      "signupButtonPresent": false
+    },
+    "afterLoginClick": {
+      "clicked": true,
+      "url": "http://localhost:5173/dashboard"
+    },
+    "directLogin": {
+      "url": "http://localhost:5173/dashboard",
+      "heading": null
+    }
+  },
+  "clean-no-session": {
+    "landing": {
+      "url": "http://localhost:5173/",
+      "buttons": [
+        {
+          "text": "Log in",
+          "visible": true
+        },
+        {
+          "text": "Sign up",
+          "visible": true
+        }
+      ],
+      "signupButtonPresent": true
+    },
+    "afterLoginClick": {
+      "clicked": true,
+      "url": "http://localhost:5173/login"
+    },
+    "directLogin": {
+      "url": "http://localhost:5173/login",
+      "heading": "Welcome Back"
+    }
+  }
+}

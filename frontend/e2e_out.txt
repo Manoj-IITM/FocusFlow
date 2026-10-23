@@ -1,0 +1,87 @@
+{
+  "loginPageRendered": {
+    "hasForm": true,
+    "hasButton": true,
+    "buttonText": "Sign In to Workspace",
+    "bodyText": "FocusFlow\n\nYour focus today builds your tomorrow.\n\nWelcome Back\n\nEnter your credentials to access your study environment.\n\nUsername or Email\nPassword\nForgot password?\nSign In to Workspace\n\n✨ Pre-filled with demo account credentials (Alex).\n\nDon't have an account?\nCreate Account\nBack to homepage\nDark"
+  },
+  "loginClick": {
+    "clicked": true,
+    "url": "http://localhost:5173/dashboard",
+    "errorBadge": null,
+    "localStorage": {
+      "focusflow_playlist_title": "My Songs",
+      "focusflow_task_timers_1": "{\"1\":{\"remaining\":5100,\"total\":5100,\"running\":false,\"deadlineAt\":null,\"lastUpdatedAt\":null,\"sessionStartedAt\":null,\"sessionId\":null}}",
+      "focusflow_access_token": "MkAAGXprxebNi92igerBTIYfYhFyykas2sPYhocSCLw",
+      "focusflow_active_playlist_id": "focusflow-default-playlist",
+      "focusflow_current_focus_1": "{\"seconds\":0,\"recordedSeconds\":0,\"pausedAt\":null}",
+      "focusflow_active_task_1": "{\"id\":1,\"title\":\"Maths Revision - Chapter 5\",\"tag\":\"Study\",\"durationMinutes\":85}",
+      "focusflow_playlists": "[{\"id\":\"focusflow-default-playlist\",\"title\":\"My Songs\",\"tracks\":[],\"currentTrackIndex\":0}]",
+      "focusflow_user": "{\"access_token\":\"MkAAGXprxebNi92igerBTIYfYhFyykas2sPYhocSCLw\",\"email\":\"alex@focusflow.app\",\"id\":1,\"username\":\"Alex\"}",
+      "focusflow_sessions_1": "[]",
+      "focusflow_task_lists_1": "{\"lists\":[{\"id\":\"default\",\"name\":\"My Tasks\",\"color\":\"#14b8a6\",\"icon\":\"ti-list-check\"}],\"activeListId\":\"default\",\"taskListByTaskId\":{},\"deletedTaskIds\":[],\"tasks\":[{\"id\":1,\"task_list_id\":\"default\",\"title\":\"Maths Revision - Chapter 5\",\"tag\":\"Study\",\"duration_minutes\":85,\"completed\":false,\"completed_time\":null},{\"id\":2,\"task_list_id\":\"default\",\"title\":\"Physics Numericals\",\"tag\":\"Study\",\"duration_minutes\":45,\"completed\":true,\"completed_time\":\"Today, 06:15 PM\"},{\"id\":3,\"task_list_id\":\"default\",\"title\":\"Chemistry Notes\",\"tag\":\"Study\",\"duration_minutes\":120,\"completed\":false,\"completed_time\":null},{\"id\":4,\"task_list_id\":\"default\",\"title\":\"Read Chapter 3 (English)\",\"tag\":\"Study\",\"duration_minutes\":60,\"completed\":false,\"completed_time\":null},{\"id\":5,\"task_list_id\":\"default\",\"title\":\"DSA Practice Questions\",\"tag\":\"Study\",\"duration_minutes\":90,\"completed\":true,\"completed_time\":\"Today, 04:20 PM\"}],\"taskTimers\":{\"1\":{\"remaining\":5100,\"total\":5100,\"running\":false,\"deadlineAt\":null,\"lastUpdatedAt\":null,\"sessionStartedAt\":null,\"sessionId\":null}},\"activeFocusTask\":{\"id\":1,\"title\":\"Maths Revision - Chapter 5\",\"tag\":\"Study\",\"durationMinutes\":85}}",
+      "focusflow_music_playing": "false",
+      "focusflow_current_track_idx": "0",
+      "focusflow_playlist": "[]"
+    }
+  },
+  "signupPageRendered": {
+    "hasForm": true,
+    "hasButton": true,
+    "buttonText": "Start Focusing Now",
+    "inputs": [
+      {
+        "type": "text",
+        "ph": "e.g. Alex"
+      },
+      {
+        "type": "email",
+        "ph": "alex@example.com"
+      },
+      {
+        "type": "password",
+        "ph": "Create a strong password"
+      },
+      {
+        "type": "password",
+        "ph": "Repeat password"
+      }
+    ]
+  },
+  "signupClick": {
+    "clicked": true,
+    "url": "http://localhost:5173/dashboard",
+    "errorBadge": null,
+    "localStorage": {
+      "focusflow_playlist_title": "My Songs",
+      "focusflow_current_focus_3": "{\"seconds\":0,\"recordedSeconds\":0,\"pausedAt\":null}",
+      "focusflow_task_timers_3": "{\"1\":{\"remaining\":5100,\"total\":5100,\"running\":false,\"deadlineAt\":null,\"lastUpdatedAt\":null,\"sessionStartedAt\":null,\"sessionId\":null}}",
+      "focusflow_task_lists_3": "{\"lists\":[{\"id\":\"default\",\"name\":\"My Tasks\",\"color\":\"#14b8a6\",\"icon\":\"ti-list-check\"}],\"activeListId\":\"default\",\"taskListByTaskId\":{\"24\":\"default\",\"25\":\"default\",\"26\":\"default\",\"27\":\"default\",\"28\":\"default\"},\"deletedTaskIds\":[],\"tasks\":[{\"actual_duration_seconds\":0,\"completed\":false,\"completed_at\":null,\"completed_time\":null,\"created_at\":\"2026-10-22 03:40:13\",\"due_date\":null,\"duration_minutes\":85,\"id\":24,\"notes\":\"\",\"occurrence_date\":null,\"occurrence_limit\":null,\"priority\":\"medium\",\"recurrence_rule\":null,\"scheduled_date\":null,\"series_active\":null,\"series_end_date\":null,\"series_id\":null,\"series_start_date\":null,\"skipped\":false,\"tag\":\"Study\",\"task_list_id\":\"default\",\"title\":\"Maths Revision - Chapter 5\",\"user_id\":3},{\"actual_duration_seconds\":0,\"completed\":false,\"completed_at\":null,\"completed_time\":null,\"created_at\":\"2026-10-22 03:40:13\",\"due_date\":null,\"duration_minutes\":120,\"id\":26,\"notes\":\"\",\"occurrence_date\":null,\"occurrence_limit\":null,\"priority\":\"medium\",\"recurrence_rule\":null,\"scheduled_date\":null,\"series_active\":null,\"series_end_date\":null,\"series_id\":null,\"series_start_date\":null,\"skipped\":false,\"tag\":\"Study\",\"task_list_id\":\"default\",\"title\":\"Chemistry Notes\",\"user_id\":3},{\"actual_duration_seconds\":0,\"completed\":false,\"completed_at\":null,\"completed_time\":null,\"created_at\":\"2026-10-22 03:40:13\",\"due_date\":null,\"duration_minutes\":60,\"id\":27,\"notes\":\"\",\"occurrence_date\":null,\"occurrence_limit\":null,\"priority\":\"medium\",\"recurrence_rule\":null,\"scheduled_date\":null,\"series_active\":null,\"series_end_date\":null,\"series_id\":null,\"series_start_date\":null,\"skipped\":false,\"tag\":\"Study\",\"task_list_id\":\"default\",\"title\":\"Read Chapter 3 (English)\",\"user_id\":3},{\"actual_duration_seconds\":0,\"completed\":true,\"completed_at\":null,\"completed_time\":\"Today, 06:15 PM\",\"created_at\":\"2026-10-22 03:40:13\",\"due_date\":null,\"duration_minutes\":45,\"id\":25,\"notes\":\"\",\"occurrence_date\":null,\"occurrence_limit\":null,\"priority\":\"medium\",\"recurrence_rule\":null,\"scheduled_date\":null,\"series_active\":null,\"series_end_date\":null,\"series_id\":null,\"series_start_date\":null,\"skipped\":false,\"tag\":\"Study\",\"task_list_id\":\"default\",\"title\":\"Physics Numericals\",\"user_id\":3},{\"actual_duration_seconds\":0,\"completed\":true,\"completed_at\":null,\"completed_time\":\"Today, 04:20 PM\",\"created_at\":\"2026-10-22 03:40:13\",\"due_date\":null,\"duration_minutes\":90,\"id\":28,\"notes\":\"\",\"occurrence_date\":null,\"occurrence_limit\":null,\"priority\":\"medium\",\"recurrence_rule\":null,\"scheduled_date\":null,\"series_active\":null,\"series_end_date\":null,\"series_id\":null,\"series_start_date\":null,\"skipped\":false,\"tag\":\"Study\",\"task_list_id\":\"default\",\"title\":\"DSA Practice Questions\",\"user_id\":3},{\"id\":1,\"task_list_id\":\"default\",\"title\":\"Maths Revision - Chapter 5\",\"tag\":\"Study\",\"duration_minutes\":85,\"completed\":false,\"completed_time\":null},{\"id\":2,\"task_list_id\":\"default\",\"title\":\"Physics Numericals\",\"tag\":\"Study\",\"duration_minutes\":45,\"completed\":true,\"completed_time\":\"Today, 06:15 PM\"},{\"id\":3,\"task_list_id\":\"default\",\"title\":\"Chemistry Notes\",\"tag\":\"Study\",\"duration_minutes\":120,\"completed\":false,\"completed_time\":null},{\"id\":4,\"task_list_id\":\"default\",\"title\":\"Read Chapter 3 (English)\",\"tag\":\"Study\",\"duration_minutes\":60,\"completed\":false,\"completed_time\":null},{\"id\":5,\"task_list_id\":\"default\",\"title\":\"DSA Practice Questions\",\"tag\":\"Study\",\"duration_minutes\":90,\"completed\":true,\"completed_time\":\"Today, 04:20 PM\"}],\"taskTimers\":{\"1\":{\"remaining\":5100,\"total\":5100,\"running\":false,\"deadlineAt\":null,\"lastUpdatedAt\":null,\"sessionStartedAt\":null,\"sessionId\":null}},\"activeFocusTask\":{\"id\":1,\"title\":\"Maths Revision - Chapter 5\",\"tag\":\"Study\",\"durationMinutes\":85}}",
+      "focusflow_access_token": "kg4iPyMZrCeZarKOSi6yJPEDgM3EWV2qf9t39KjYBjg",
+      "focusflow_active_task_3": "{\"id\":1,\"title\":\"Maths Revision - Chapter 5\",\"tag\":\"Study\",\"durationMinutes\":85}",
+      "focusflow_active_playlist_id": "focusflow-default-playlist",
+      "focusflow_playlists": "[{\"id\":\"focusflow-default-playlist\",\"title\":\"My Songs\",\"tracks\":[],\"currentTrackIndex\":0}]",
+      "focusflow_user": "{\"access_token\":\"kg4iPyMZrCeZarKOSi6yJPEDgM3EWV2qf9t39KjYBjg\",\"email\":\"e2e1792640413097@example.com\",\"id\":3,\"username\":\"e2e1792640413097\"}",
+      "focusflow_sessions_3": "[]",
+      "focusflow_music_playing": "false",
+      "focusflow_current_track_idx": "0",
+      "focusflow_playlist": "[]"
+    }
+  },
+  "consoleErrors": [
+    "[log:network] Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ],
+  "failedRequests": [],
+  "consoleLogs": [
+    "[debug] [vite] connecting...",
+    "[debug] [vite] connected.",
+    "[api] 200 http://localhost:5173/api/auth/login",
+    "[api] 200 http://localhost:5173/api/tasks?date=2026-10-22&view=day",
+    "[api] 200 http://localhost:5173/api/stats",
+    "[debug] [vite] connecting...",
+    "[debug] [vite] connected.",
+    "[api] 201 http://localhost:5173/api/auth/signup",
+    "[api] 200 http://localhost:5173/api/tasks?date=2026-10-22&view=day",
+    "[api] 200 http://localhost:5173/api/stats"
+  ]
+}
